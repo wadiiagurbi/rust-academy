@@ -1,0 +1,22 @@
+[package]
+name = "final-project"
+version = "0.1.0"
+edition = "2021"
+description = "A simple SQLite-backed CLI task manager"
+license = "MIT"
+
+[[bin]]
+name = "task-manager"
+path = "src/main.rs"
+
+[lib]
+name = "final_project"
+path = "src/lib.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+[dev-dependencies]
+tempfile = "3"
